@@ -17,7 +17,7 @@ double elapsed_time( clock_t start, clock_t finish) {
 }
 
 void print_to_file(ofstream &fout, double &time, int size, int height, int ipl, bool print = 1) {
-	// time is total time
+	// time is total time in milliseconds
 	// n is the number operations, available globally
 	double avg_depth = static_cast<double>(ipl)/size;
 	fout<<n<<","<<size<<","<<height<<","<<avg_depth<<","<<(time/3*n)<<endl;
@@ -55,7 +55,7 @@ void do_operations(BinarySearchTree<int> &bst1, AvlTree<int> & avl1, bool print 
     	bst1.remove(x+i);
     }		// n number of removals
     finish = clock();
-    t1 = elapsed_time(start, finish);
+    t1 = elapsed_time(start, finish);  // converted in seconds as well.
 
     print_to_file(fout1, t1, size, height, ipl );
 
