@@ -16,7 +16,7 @@ double elapsed_time( clock_t start, clock_t finish) {
    return (finish - start)/(double)(CLOCKS_PER_SEC/1000);
 }
 
-void print_to_file(ofstream &fout, double &time, int size, int height, int ipl, bool print = 1) {
+void print_to_file(ofstream &fout, double &time, int size, int height, int ipl, bool print = 0) {
 	// time is total time in milliseconds
 	// n is the number operations, available globally
 	double avg_depth = static_cast<double>(ipl)/size;
