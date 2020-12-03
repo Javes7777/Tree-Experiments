@@ -57,7 +57,6 @@ void do_operations(BinarySearchTree<int> &bst1, AvlTree<int> & avl1, bool print 
     finish = clock();
     t1 = elapsed_time(start, finish);
 
-    size = bst1.getSize();
     print_to_file(fout1, t1, size, height, ipl );
 
     start.~clock_t();
