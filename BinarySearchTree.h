@@ -392,7 +392,7 @@ class BinarySearchTree
 
     int ipl(const BinaryNode* root, const int depth = 0) const {
         int count = 0;
-        if (root->left != NULL || root->right != NULL) {
+        if (root != NULL) {
             count = depth;
             if (root->left != NULL) 
                 count +=  ipl(root->left, depth+1);
